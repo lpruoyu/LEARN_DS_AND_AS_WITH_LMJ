@@ -232,6 +232,14 @@ public abstract class BinaryTree<E> implements Tree<E>, BinaryTreeInfo {
             this.parent = parent;
         }
 
+        boolean isLeftOfParent() {
+            return parent != null && parent.left == this;
+        }
+
+        boolean isRightOfParent() {
+            return parent != null && parent.right == this;
+        }
+
         boolean hasTwoChildren() {
             return left != null && right != null;
         }
@@ -239,6 +247,7 @@ public abstract class BinaryTree<E> implements Tree<E>, BinaryTreeInfo {
         boolean isLeaf() {
             return left == null && right == null;
         }
+
     }
 
     @Override

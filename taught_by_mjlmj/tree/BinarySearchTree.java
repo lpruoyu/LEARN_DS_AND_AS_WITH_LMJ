@@ -20,8 +20,9 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
     @Override
     public void add(E element) {
         elementNotNullCheck(element);
+        Node<E> newNode = createNewNode(element, null);
         if (null == root) {
-            root = new Node<>(element, null);
+            root = newNode;
         } else {
             Node<E> node = root;
             Node<E> parent = root;
@@ -42,7 +43,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
                 }
             }
 
-            final Node<E> newNode = new Node<>(element, parent);
+            newNode = createNewNode(element, parent);
 
             if (cmp > 0) {
                 parent.right = newNode;
@@ -50,16 +51,30 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
                 parent.left = newNode;
             }
         }
+
         size++;
+
+        afterAdd(newNode);
+    }
+
+    protected void afterAdd(Node<E> node) {
+    }
+
+    protected void afterRemove(Node<E> node) {
+    }
+
+    protected Node<E> createNewNode(E element, Node<E> parent) {
+        return new Node<>(element, parent);
     }
 
     @Override
     public void remove(E element) {
-        remove(node(element));
+        remove(findNode(element));
     }
 
     private void remove(Node<E> node) {
         if (null == node) return;
+
         if (node.hasTwoChildren()) {
             Node<E> s = successor(node);
             node.element = s.element;
@@ -87,9 +102,12 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
         }
 
         size--;
+
+        afterRemove(node);
+
     }
 
-    private Node<E> node(E element) {
+    private Node<E> findNode(E element) {
         if (null == element) return null; // 不支持添加null元素
 
         Node<E> node = root;
@@ -109,7 +127,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
 
     @Override
     public boolean contains(E e) {
-        return node(e) != null;
+        return findNode(e) != null;
     }
 
     protected int compare(E e1, E e2) {

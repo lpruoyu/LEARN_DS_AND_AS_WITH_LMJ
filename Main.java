@@ -1,25 +1,47 @@
 import taught_by_mjlmj.other.printer.BinaryTrees;
-import taught_by_mjlmj.tree.BinarySearchTree;
+import taught_by_mjlmj.tree.AVLTree;
 
 public class Main {
 
+    static void test1() {
+        Integer data[] = new Integer[]{
+                67, 52, 92, 96, 53, 95, 13, 63, 34
+        };
+
+//        System.out.println("-----------------------begin add----------------");
+
+        AVLTree<Integer> avl = new AVLTree<>();
+        for (int i = 0; i < data.length; i++) {
+            avl.add(data[i]);
+//            System.out.println("【" + data[i] + "】");
+//            System.out.println("---------------------------------------");
+        }
+
+//        BinaryTrees.println(avl);
+
+//        System.out.println("-----------------------begin remove----------------");
+
+        for (int i = 0; i < data.length; i++) {
+            avl.remove(data[i]);
+            System.out.println("\n\n---------------------------------------");
+            BinaryTrees.println(avl);
+        }
+
+    }
+
     public static void main(String[] args) {
-        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
-        int arr[] = {35, 23, 18, 10, 5, 21, 20, 25, 27, 28, 37, 48, 47};
+        test1();
+    }
+
+    private static void test2() {
+        AVLTree<Integer> bst = new AVLTree<>();
+        int arr[] = {
+                35, 23, 18, 10, 5, 21, 20, 25, 27, 28, 37, 48, 47
+        };
         for (int i = 0; i < arr.length; i++) {
             bst.add(arr[i]);
         }
         BinaryTrees.println(bst);
-        System.out.println(bst.height());
-        bst.remove(35);
-        bst.remove(20);
-        bst.remove(18);
-        bst.remove(5);
-        bst.remove(27);
-        bst.remove(48);
-        BinaryTrees.println(bst);
-        System.out.println(bst.height());
-        bst.clear();
         System.out.println(bst.height());
     }
 

@@ -17,4 +17,5 @@ public interface BinaryTreeInfo {
 	 * how to print the node
 	 */
 	Object string(Object node);
+
 }
