@@ -1,7 +1,11 @@
-import taught_by_mjlmj.other.printer.BinaryTrees;
-import taught_by_mjlmj.tree.AVLTree;
+import taught_by_mjlmj.stepone.other.printer.BinaryTrees;
+import taught_by_mjlmj.stepone.tree.AVLTree;
 
 public class Main {
+
+    public static void main(String[] args) {
+
+    }
 
     static void test1() {
         Integer data[] = new Integer[]{
@@ -27,10 +31,6 @@ public class Main {
             BinaryTrees.println(avl);
         }
 
-    }
-
-    public static void main(String[] args) {
-        test1();
     }
 
     private static void test2() {
