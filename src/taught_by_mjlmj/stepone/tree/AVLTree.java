@@ -2,9 +2,10 @@ package taught_by_mjlmj.stepone.tree;
 
 import java.util.Comparator;
 
-public class AVLTree<E> extends BinarySearchTree<E> {
+public class AVLTree<E> extends BalancedBinarySearchTree<E> {
 
     public AVLTree() {
+        this(null);
     }
 
     public AVLTree(Comparator<E> comparator) {
@@ -24,7 +25,7 @@ public class AVLTree<E> extends BinarySearchTree<E> {
     }
 
     @Override
-    protected void afterRemove(Node<E> node) {
+    protected void afterRemove(Node<E> node, Node<E> replacement) {
         while ((node = node.parent) != null) {
             if (isBalanced(node)) { // 如果平衡更新高度
                 updateHeight(node);
@@ -54,41 +55,6 @@ public class AVLTree<E> extends BinarySearchTree<E> {
         }
     }
 
-    private void rotate(
-            Node<E> r,
-            Node<E> a, Node<E> b, Node<E> c,
-            Node<E> d,
-            Node<E> e, Node<E> f, Node<E> g
-    ) {
-
-        if (r.isLeftOfParent()) {
-            r.parent.left = d;
-        } else if (r.isRightOfParent()) {
-            r.parent.right = d;
-        } else {
-            root = d;
-        }
-        d.parent = r.parent;
-
-        b.left = a;
-        if (a != null) a.parent = b;
-        b.right = c;
-        if (c != null) c.parent = b;
-        updateHeight(b);
-
-        f.left = e;
-        if (e != null) e.parent = f;
-        f.right = g;
-        if (g != null) g.parent = f;
-        updateHeight(f);
-
-        d.left = b;
-        d.right = f;
-        b.parent = d;
-        f.parent = d;
-        updateHeight(d);
-
-    }
 
     private void reBalance(Node<E> grand) {
         AVLNode<E> g = (AVLNode<E>) grand;
@@ -113,47 +79,17 @@ public class AVLTree<E> extends BinarySearchTree<E> {
 
     }
 
-    // 右旋转
-    private void rotateRight(AVLNode<E> g) {
-        AVLNode<E> p = (AVLNode<E>) g.left;
-
-        if (p.right != null) p.right.parent = g;
-
-        g.left = p.right;
-        p.right = g;
-
-        afterRotate(g, p);
-
+    @Override
+    protected void rotate(Node<E> r, Node<E> a, Node<E> b, Node<E> c, Node<E> d, Node<E> e, Node<E> f, Node<E> g) {
+        super.rotate(r, a, b, c, d, e, f, g);
+        updateHeight(b);
+        updateHeight(f);
+        updateHeight(d);
     }
 
-    // 左旋转
-    private void rotateLeft(AVLNode<E> g) {
-        AVLNode<E> p = (AVLNode<E>) g.right;
-
-        if (p.left != null) p.left.parent = g;
-
-        g.right = p.left;
-        p.left = g;
-
-        afterRotate(g, p);
-
-    }
-
-    private void afterRotate(AVLNode<E> g, AVLNode<E> p) {
-
-        if (g.parent != null) {
-            if (g.isLeftOfParent()) {
-                g.parent.left = p;
-            } else {
-                g.parent.right = p;
-            }
-        } else {
-            root = p;
-        }
-        p.parent = g.parent;
-
-        g.parent = p;
-
+    @Override
+    protected void afterRotate(Node<E> g, Node<E> p) {
+        super.afterRotate(g, p);
         updateHeight(g);
         updateHeight(p);
     }

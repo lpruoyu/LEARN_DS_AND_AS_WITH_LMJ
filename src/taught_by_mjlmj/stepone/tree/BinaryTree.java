@@ -248,6 +248,13 @@ public abstract class BinaryTree<E> implements Tree<E>, BinaryTreeInfo {
             return left == null && right == null;
         }
 
+        // 返回兄弟节点
+        Node<E> sibling() {
+            if (isLeftOfParent()) return (Node<E>) parent.right;
+            if (isRightOfParent()) return (Node<E>) parent.left;
+            return null;
+        }
+
     }
 
     @Override
@@ -267,7 +274,7 @@ public abstract class BinaryTree<E> implements Tree<E>, BinaryTreeInfo {
 
     @Override
     public Object string(Object node) {
-        return ((Node) node).element;
+        return node;
     }
 
 //
