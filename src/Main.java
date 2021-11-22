@@ -1,11 +1,134 @@
+import taught_by_mjlmj.stepone.map.Map;
+import taught_by_mjlmj.stepone.map.TreeMap;
+import taught_by_mjlmj.stepone.other.FileInfo;
+import taught_by_mjlmj.stepone.other.Files;
+import taught_by_mjlmj.stepone.other.Times;
 import taught_by_mjlmj.stepone.other.printer.BinaryTrees;
+import taught_by_mjlmj.stepone.set.ListSet;
+import taught_by_mjlmj.stepone.set.Set;
+import taught_by_mjlmj.stepone.set.TreeSet1;
+import taught_by_mjlmj.stepone.set.TreeSet;
 import taught_by_mjlmj.stepone.tree.AVLTree;
 import taught_by_mjlmj.stepone.tree.RedBlackTree;
 
 public class Main {
 
     public static void main(String[] args) {
-        test5();
+        testSet();
+    }
+
+    private static void test9() {
+        FileInfo fileInfo = Files.read("D:\\code_space\\LearnJava\\IntellijIdea\\LearnDataStructuresWithLMJ\\src\\taught_by_mjlmj\\stepone",
+                new String[]{"java"});
+        System.out.println("文件数量：" + fileInfo.getFiles());
+        System.out.println("代码行数：" + fileInfo.getLines());
+        String[] words = fileInfo.words();
+        System.out.println("未去重单词数量：" + words.length);
+
+
+        TreeMap<String, Integer> treeMap = new TreeMap<>();
+
+        for (String word : words) {
+            final Integer integer = treeMap.get(word);
+            int count = integer == null ? 0 : integer;
+            treeMap.put(word, count + 1);
+        }
+
+        System.out.println("去重单词数量：" + treeMap.size());
+
+        treeMap.traversal(new Map.Visitor<String, Integer>() {
+            @Override
+            public boolean visit(String key, Integer value) {
+                System.out.println("key : " + key + " ; value : " + value);
+                return false;
+            }
+        });
+
+    }
+
+    private static void test8() {
+        TreeMap<String, Integer> treeMap = new TreeMap<>();
+        System.out.println(treeMap.put("class", 6));
+        System.out.println(treeMap.put("class", 3));
+        System.out.println(treeMap.put("static", 4));
+        System.out.println(treeMap.put("public", 33));
+        System.out.println(treeMap.put("static", 6));
+        System.out.println(treeMap.put("class", 3));
+        System.out.println(treeMap.put("class", 4));
+        System.out.println(treeMap.put("public", 4));
+
+        System.out.println("------------------------");
+
+        treeMap.traversal(new Map.Visitor<String, Integer>() {
+            @Override
+            public boolean visit(String key, Integer value) {
+                System.out.println("key : " + key + " ; value : " + value);
+                return false;
+            }
+        });
+
+    }
+
+    static class Person {
+    }
+
+    static void testSet(Set<String> set, String[] words) {
+        for (int i = 0; i < words.length; i++) {
+            set.add(words[i]);
+        }
+        for (int i = 0; i < words.length; i++) {
+            set.contains(words[i]);
+        }
+        for (int i = 0; i < words.length; i++) {
+            set.remove(words[i]);
+        }
+    }
+
+    static void test() {
+        FileInfo fileInfo = Files.read("C:\\Users\\lpruoyu\\Desktop\\src\\java\\util",
+                new String[]{"java"});
+        System.out.println("文件数量：" + fileInfo.getFiles());
+        System.out.println("代码行数：" + fileInfo.getLines());
+        String[] words = fileInfo.words();
+        System.out.println("未去重单词数量：" + words.length);
+
+        Times.test("ListSet", new Times.Task() {
+            public void execute() {
+                testSet(new ListSet<>(), words);
+            }
+        });
+
+        Times.test("TreeSet", new Times.Task() {
+            public void execute() {
+                testSet(new TreeSet1<>(), words);
+            }
+        });
+    }
+
+
+    private static void test7() {
+        //  TreeSet的限制：必须添加可比较元素
+        TreeSet1<Person> redBlackTree = new TreeSet1<>();
+        redBlackTree.add(new Person());
+        redBlackTree.add(new Person());
+    }
+
+    private static void testSet() {
+        Set<Integer> set = new TreeSet<>();
+        set.add(13);
+        set.add(10);
+        set.add(13);
+        set.add(10);
+        set.add(10);
+        set.add(11);
+
+        set.traversal(new Set.Visitor<Integer>() {
+            @Override
+            public boolean visit(Integer element) {
+                System.out.println(element);
+                return false;
+            }
+        });
     }
 
     static final int arr[] = {

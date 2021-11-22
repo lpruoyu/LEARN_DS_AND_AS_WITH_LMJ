@@ -13,7 +13,7 @@ public class Times {
 
     public static void test(String title, Task task) {
         if (task == null) return;
-        new Thread(() -> {
+//        new Thread(() -> {
             System.out.println((title == null) ? "" : ("【" + title + "】"));
             System.out.println("开始：" + fmt.format(new Date()));
             final long begin = System.currentTimeMillis();
@@ -23,7 +23,7 @@ public class Times {
             final double delta = (end - begin) / 1000.0;
             System.out.println("耗时：" + delta + "秒");
             System.out.println("-------------------------------------");
-        }).start();
+//        }).start();
     }
 
 }

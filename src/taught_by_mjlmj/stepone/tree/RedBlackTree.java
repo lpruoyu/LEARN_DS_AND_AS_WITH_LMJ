@@ -1,6 +1,16 @@
 package taught_by_mjlmj.stepone.tree;
 
+import java.util.Comparator;
+
 public class RedBlackTree<E> extends BalancedBinarySearchTree<E> {
+
+    public RedBlackTree() {
+        this(null);
+    }
+
+    public RedBlackTree(Comparator<E> comparator) {
+        super(comparator);
+    }
 
     @Override
     protected void afterRemove(Node<E> node, Node<E> replacement) {
@@ -13,7 +23,7 @@ public class RedBlackTree<E> extends BalancedBinarySearchTree<E> {
 
         /* 其余情况（删除的是黑色叶子节点） */
 
-        // 删除的是根节点
+        // 删除的是根节点 或者 下溢到了根节点
         if (node.parent == null) return;
 
         Node<E> parent = node.parent;
