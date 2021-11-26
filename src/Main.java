@@ -1,5 +1,6 @@
+import taught_by_mjlmj.stepone.heap.BinaryHeap;
 import taught_by_mjlmj.stepone.map.HashMap_v0_simple;
-import taught_by_mjlmj.stepone.map.Map;
+import taught_by_mjlmj.stepone.interfaces.Map;
 import taught_by_mjlmj.stepone.map.TreeMap;
 import taught_by_mjlmj.stepone.model.Key;
 import taught_by_mjlmj.stepone.model.Person;
@@ -11,13 +12,102 @@ import taught_by_mjlmj.stepone.other.Files;
 import taught_by_mjlmj.stepone.other.Times;
 import taught_by_mjlmj.stepone.other.printer.BinaryTrees;
 import taught_by_mjlmj.stepone.set.HashSet;
-import taught_by_mjlmj.stepone.set.Set;
-import taught_by_mjlmj.stepone.set.TreeSet;
+import taught_by_mjlmj.stepone.interfaces.Set;
+import taught_by_mjlmj.stepone.set.TreeSet2;
 import taught_by_mjlmj.stepone.set.TreeSet1;
 import taught_by_mjlmj.stepone.tree.AVLTree;
 import taught_by_mjlmj.stepone.tree.RedBlackTree;
 
+import java.util.Comparator;
+
 public class Main {
+
+    public static void main(String[] args) {
+        topK();
+    }
+
+    private static void topK() {
+        // 找出最大的前k个数
+        int k = 3;
+        Integer[] data = {51, 30, 39, 92, 74, 25, 16, 93,
+                91, 19, 54, 47, 73, 62, 76, 63, 35, 18, 89,
+                90, 6, 65, 49, 3, 26, 61, 21, 48};
+        BinaryHeap<Integer> minHeap = new BinaryHeap<>(new Comparator<Integer>() {
+            /* 返回值大于0，o1比较大 */
+            /* 返回值==0，o1==o2 */
+            /* 返回值小于0，o2比较大 */
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2 - o1;
+            }
+        });
+        for (int i = 0; i < data.length; i++) {
+            final Integer val = data[i];
+            if (minHeap.size() < k) minHeap.add(val);
+            else {
+                if (val > minHeap.get()) {
+                    minHeap.replace(val);
+                }
+            }
+        }
+        BinaryTrees.println(minHeap);
+    }
+
+    private static void testHeapifyHeap() {
+        Integer[] data = {319, 6, 66, 69, 2, 64, 88, 38, 14, 37, 90, 54, 74, 92, 32, 83, 71};
+        BinaryHeap<Integer> heap = new BinaryHeap<>(data);
+        System.out.println(heap.size());
+        BinaryTrees.println(heap);
+    }
+
+    private static void testRemoveHeap() {
+        BinaryHeap<Integer> heap = new BinaryHeap<>();
+        heap.add(38);
+        heap.add(40);
+        heap.add(21);
+        heap.add(55);
+        heap.add(1);
+        heap.add(59);
+        heap.add(44);
+        heap.add(74);
+        heap.add(12);
+        heap.add(29);
+        heap.add(-3);
+        heap.add(545);
+        while (!heap.isEmpty()) {
+            printHeap(heap);
+            heap.remove();
+        }
+        System.out.println(heap.size());
+    }
+
+    private static void testReplaceHeap() {
+        BinaryHeap<Integer> heap = new BinaryHeap<>();
+        heap.add(38);
+        heap.add(40);
+        heap.add(21);
+        heap.add(55);
+        heap.add(59);
+        heap.add(44);
+        heap.add(74);
+        heap.add(12);
+        heap.add(29);
+        heap.add(545);
+        for (int i = heap.size() - 1; i >= 0; i--) {
+            heap.replace(i);
+        }
+        printHeap(heap);
+        for (int i = 80; i < 100; i++) {
+            heap.add(i);
+        }
+        printHeap(heap);
+    }
+
+    private static void printHeap(BinaryHeap<Integer> heap) {
+        System.out.println("size : " + heap.size());
+        BinaryTrees.println(heap);
+        System.out.println("---------------------------------------------");
+    }
 
     static void test() {
         FileInfo fileInfo = Files.read("C:\\Users\\lpruoyu\\Desktop\\java\\util",
@@ -35,7 +125,7 @@ public class Main {
 
         Times.test("TreeSet", new Times.Task() {
             public void execute() {
-                testSet(new TreeSet<>(), words);
+                testSet(new TreeSet2<>(), words);
             }
         });
 
@@ -46,9 +136,6 @@ public class Main {
             }
         });
 
-    }
-    public static void main(String[] args) {
-        test();
     }
 
     public static void test5(HashMap_v0_simple<Object, Integer> map) {
@@ -80,7 +167,6 @@ public class Main {
             System.out.print(map.get(new Key(i)) + " ");
         }
     }
-
 
     private static void testHash4() {
     /*
@@ -142,7 +228,6 @@ public class Main {
             System.out.print(map.get(new Key(i)) + " ");
         }
     }
-
 
     private static void testHash1() {
         Person p1 = new Person(18, 1.6f, "jack");
@@ -227,7 +312,6 @@ public class Main {
 
     }
 
-
     static void testSet(Set<String> set, String[] words) {
         for (int i = 0; i < words.length; i++) {
             set.add(words[i]);
@@ -240,8 +324,6 @@ public class Main {
         }
     }
 
-
-
     private static void test7() {
         //  TreeSet的限制：必须添加可比较元素
         TreeSet1<Person> redBlackTree = new TreeSet1<>();
@@ -250,7 +332,7 @@ public class Main {
     }
 
     private static void testSet() {
-        Set<Integer> set = new TreeSet<>();
+        Set<Integer> set = new TreeSet2<>();
         set.add(13);
         set.add(10);
         set.add(13);

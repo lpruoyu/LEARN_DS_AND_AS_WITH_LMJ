@@ -1,5 +1,6 @@
 package taught_by_mjlmj.stepone.map;
 
+import taught_by_mjlmj.stepone.interfaces.Map;
 import taught_by_mjlmj.stepone.interfaces.Queue;
 import taught_by_mjlmj.stepone.other.printer.BinaryTreeInfo;
 import taught_by_mjlmj.stepone.other.printer.BinaryTrees;

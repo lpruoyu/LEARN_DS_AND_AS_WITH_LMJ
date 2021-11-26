@@ -1,5 +1,7 @@
 package taught_by_mjlmj.stepone.map;
 
+import taught_by_mjlmj.stepone.interfaces.Map;
+
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.Queue;

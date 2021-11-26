@@ -1,20 +1,21 @@
 package taught_by_mjlmj.stepone.set;
 
-import taught_by_mjlmj.stepone.map.Map;
+import taught_by_mjlmj.stepone.interfaces.Map;
+import taught_by_mjlmj.stepone.interfaces.Set;
 import taught_by_mjlmj.stepone.map.TreeMap;
 
 import java.util.Comparator;
 
-public class TreeSet<E> implements Set<E> {
+public class TreeSet2<E> implements Set<E> {
 
     private final Map<E, Object> map;
     private Comparator<E> comparator;
 
-    public TreeSet() {
+    public TreeSet2() {
         this(null);
     }
 
-    public TreeSet(Comparator<E> comparator) {
+    public TreeSet2(Comparator<E> comparator) {
         this.comparator = comparator;
         map = new TreeMap<>(comparator);
     }

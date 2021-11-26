@@ -1,6 +1,6 @@
 import taught_by_mjlmj.stepone.map.HashMap;
 import taught_by_mjlmj.stepone.map.LinkedHashMap;
-import taught_by_mjlmj.stepone.map.Map;
+import taught_by_mjlmj.stepone.interfaces.Map;
 import taught_by_mjlmj.stepone.model.Key;
 import taught_by_mjlmj.stepone.model.SubKey1;
 import taught_by_mjlmj.stepone.model.SubKey2;

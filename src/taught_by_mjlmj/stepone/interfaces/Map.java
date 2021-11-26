@@ -1,4 +1,4 @@
-package taught_by_mjlmj.stepone.map;
+package taught_by_mjlmj.stepone.interfaces;
 
 public interface Map<K, V> {
     int size();

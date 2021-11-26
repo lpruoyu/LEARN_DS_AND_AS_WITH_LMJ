@@ -1,6 +1,7 @@
 package taught_by_mjlmj.stepone.set;
 
 import taught_by_mjlmj.stepone.interfaces.List;
+import taught_by_mjlmj.stepone.interfaces.Set;
 import taught_by_mjlmj.stepone.linked_list.LinkedList;
 
 public class ListSet<E> implements Set<E> {

@@ -1,5 +1,6 @@
 package taught_by_mjlmj.stepone.set;
 
+import taught_by_mjlmj.stepone.interfaces.Set;
 import taught_by_mjlmj.stepone.interfaces.Tree;
 import taught_by_mjlmj.stepone.tree.RedBlackTree;
 

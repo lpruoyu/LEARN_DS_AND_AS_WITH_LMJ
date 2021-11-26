@@ -1,7 +1,8 @@
 package taught_by_mjlmj.stepone.set;
 
+import taught_by_mjlmj.stepone.interfaces.Set;
 import taught_by_mjlmj.stepone.map.HashMap;
-import taught_by_mjlmj.stepone.map.Map;
+import taught_by_mjlmj.stepone.interfaces.Map;
 
 public class HashSet<E> implements Set<E> {
 

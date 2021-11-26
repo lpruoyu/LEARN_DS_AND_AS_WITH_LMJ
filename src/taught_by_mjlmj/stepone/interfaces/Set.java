@@ -1,4 +1,4 @@
-package taught_by_mjlmj.stepone.set;
+package taught_by_mjlmj.stepone.interfaces;
 
 public interface Set<E> {
     int size();

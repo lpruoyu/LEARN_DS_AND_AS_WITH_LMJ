@@ -6,7 +6,7 @@ import taught_by_mjlmj.stepone.other.printer.BinaryTrees;
 import java.util.*;
 
 // 支持null作为key
-public class HashMap_v0_simple<K, V> implements Map<K, V> {
+public class HashMap_v0_simple<K, V> implements taught_by_mjlmj.stepone.interfaces.Map<K, V> {
     private static final int DEFAULT_CAPACITY = 1 << 4;
     private int size;
     private Node<K, V>[] table;

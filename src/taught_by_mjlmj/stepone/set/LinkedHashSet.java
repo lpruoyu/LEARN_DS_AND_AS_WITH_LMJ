@@ -1,7 +1,8 @@
 package taught_by_mjlmj.stepone.set;
 
+import taught_by_mjlmj.stepone.interfaces.Set;
 import taught_by_mjlmj.stepone.map.LinkedHashMap;
-import taught_by_mjlmj.stepone.map.Map;
+import taught_by_mjlmj.stepone.interfaces.Map;
 
 public class LinkedHashSet<E> implements Set<E> {
 
