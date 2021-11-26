@@ -1,20 +1,18 @@
 import taught_by_mjlmj.stepone.heap.BinaryHeap;
-import taught_by_mjlmj.stepone.map.HashMap_v0_simple;
 import taught_by_mjlmj.stepone.interfaces.Map;
+import taught_by_mjlmj.stepone.interfaces.Set;
+import taught_by_mjlmj.stepone.map.HashMap_v0_simple;
 import taught_by_mjlmj.stepone.map.TreeMap;
-import taught_by_mjlmj.stepone.model.Key;
-import taught_by_mjlmj.stepone.model.Person;
-import taught_by_mjlmj.stepone.model.SubKey1;
-import taught_by_mjlmj.stepone.model.SubKey2;
+import taught_by_mjlmj.stepone.model.*;
 import taught_by_mjlmj.stepone.other.Asserts;
 import taught_by_mjlmj.stepone.other.FileInfo;
 import taught_by_mjlmj.stepone.other.Files;
 import taught_by_mjlmj.stepone.other.Times;
 import taught_by_mjlmj.stepone.other.printer.BinaryTrees;
+import taught_by_mjlmj.stepone.queue.PriorityQueue;
 import taught_by_mjlmj.stepone.set.HashSet;
-import taught_by_mjlmj.stepone.interfaces.Set;
-import taught_by_mjlmj.stepone.set.TreeSet2;
 import taught_by_mjlmj.stepone.set.TreeSet1;
+import taught_by_mjlmj.stepone.set.TreeSet2;
 import taught_by_mjlmj.stepone.tree.AVLTree;
 import taught_by_mjlmj.stepone.tree.RedBlackTree;
 
@@ -23,7 +21,18 @@ import java.util.Comparator;
 public class Main {
 
     public static void main(String[] args) {
-        topK();
+        testPriorityQueue();
+    }
+
+    static void testPriorityQueue() {
+        PriorityQueue<Human> queue = new PriorityQueue<>();
+        queue.enQueue(new Human("Jack", 2));
+        queue.enQueue(new Human("Rose", 10));
+        queue.enQueue(new Human("Jake", 5));
+        queue.enQueue(new Human("James", 15));
+        while (!queue.isEmpty()) {
+            System.out.println(queue.deQueue());
+        }
     }
 
     private static void topK() {
