@@ -1,6 +1,7 @@
 import taught_by_mjlmj.stepone.heap.BinaryHeap;
 import taught_by_mjlmj.stepone.interfaces.Map;
 import taught_by_mjlmj.stepone.interfaces.Set;
+import taught_by_mjlmj.stepone.interfaces.Trie;
 import taught_by_mjlmj.stepone.map.HashMap_v0_simple;
 import taught_by_mjlmj.stepone.map.TreeMap;
 import taught_by_mjlmj.stepone.model.*;
@@ -15,13 +16,54 @@ import taught_by_mjlmj.stepone.set.TreeSet1;
 import taught_by_mjlmj.stepone.set.TreeSet2;
 import taught_by_mjlmj.stepone.tree.AVLTree;
 import taught_by_mjlmj.stepone.tree.RedBlackTree;
+import taught_by_mjlmj.stepone.trie.TrieMap;
 
 import java.util.Comparator;
 
 public class Main {
 
     public static void main(String[] args) {
-        testPriorityQueue();
+        testTrie1();
+    }
+
+    static void testTrie1() {
+        Trie<Integer> trie = new TrieMap<>();
+//        Trie<Integer> trie = new TrieMap_v0<>();
+        trie.add("cat", 1);
+        trie.add("dog", 2);
+        trie.add("doggy", 2);
+        trie.add("catalog", 3);
+        trie.add("cast", 4);
+        trie.add("小码哥", 5);
+        Asserts.test(trie.get("cat") == 1);
+        Asserts.test(trie.get("dog") == 2);
+        Asserts.test(trie.get("catalog") == 3);
+        Asserts.test(trie.get("cast") == 4);
+        Asserts.test(trie.get("小码哥") == 5);
+        Asserts.test(trie.get("小码哥哥") == null);
+//        Asserts.test(trie.size() == 6);
+        Asserts.test(trie.startsWith("do"));
+        Asserts.test(trie.startsWith("dog"));
+        Asserts.test(trie.startsWith("c"));
+        Asserts.test(trie.startsWith("ca"));
+        Asserts.test(trie.startsWith("cat"));
+        Asserts.test(trie.startsWith("cata"));
+        Asserts.test(!trie.startsWith("catax"));
+        Asserts.test(!trie.startsWith("h"));
+        Asserts.test(!trie.startsWith("he"));
+        Asserts.test(!trie.startsWith("heh"));
+        Asserts.test(!trie.startsWith("hehe"));
+
+        Asserts.test(trie.remove("hehe") == null);
+        Asserts.test(trie.remove("catalog") == 3);
+        Asserts.test(trie.remove("cat") == 1);
+        Asserts.test(trie.remove("cast") == 4);
+        Asserts.test(trie.remove("dog") == 2);
+        Asserts.test(trie.remove("doggy") == 2);
+        Asserts.test(trie.remove("小码哥") == 5);
+        Asserts.test(trie.remove("doggy") == null);
+        Asserts.test(trie.remove("dog") == null);
+        Asserts.test(trie.isEmpty());
     }
 
     static void testPriorityQueue() {
