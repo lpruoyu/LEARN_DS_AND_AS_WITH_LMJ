@@ -2,12 +2,12 @@ package taught_by_mjlmj.stepone.tree;
 
 // 二叉树
 
-
+import taught_by_mjlmj.stepone.interfaces.Queue;
+import taught_by_mjlmj.stepone.interfaces.Stack;
 import taught_by_mjlmj.stepone.interfaces.Tree;
-import taught_by_mjlmj.stepone.other.printer.BinaryTreeInfo;
-
-import java.util.LinkedList;
-import java.util.Queue;
+import taught_by_mjlmj.tools.printer.BinaryTreeInfo;
+import taught_by_mjlmj.stepone.queue.LinkedListQueue;
+import taught_by_mjlmj.stepone.stack.LinkedListStack;
 
 public abstract class BinaryTree<E> implements Tree<E>, BinaryTreeInfo {
 
@@ -33,24 +33,53 @@ public abstract class BinaryTree<E> implements Tree<E>, BinaryTreeInfo {
     // 层序遍历
     public void leverOrderTraversal(BinarySearchTree.Visitor<E> visitor) {
         traversalCheck(visitor);
-        final java.util.Queue<BinarySearchTree.Node<E>> queue = new LinkedList<>();
-        queue.offer(root);
-        BinarySearchTree.Node<E> node;
+        Queue<Node<E>> queue = new LinkedListQueue<>();
+        queue.enQueue(root);
         while (!queue.isEmpty()) {
-            node = queue.poll();
+            Node<E> node = queue.deQueue();
             visitor.visit(node.element);
-            if (node.left != null) queue.offer(node.left);
-            if (node.right != null) queue.offer(node.right);
+            if (node.left != null) queue.enQueue(node.left);
+            if (node.right != null) queue.enQueue(node.right);
         }
-        System.out.println();
     }
 
-    // 前序遍历
+    // 非递归前序遍历
     public void preorderTraversal(BinarySearchTree.Visitor<E> visitor) {
-        preorderTraversal(root, visitor);
-        System.out.println();
+        if (visitor == null || root == null) return;
+        Stack<Node<E>> stack = new LinkedListStack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            Node<E> node = stack.pop();
+            visitor.visit(node.element);
+            if (node.right != null) stack.push(node.right);
+            if (node.left != null) stack.push(node.left);
+        }
     }
 
+    // 非递归前序遍历
+    public void preorderTraversal1(BinarySearchTree.Visitor<E> visitor) {
+        if (visitor == null) return;
+        Stack<Node<E>> stack = new LinkedListStack<>();
+        Node<E> node = root;
+        while (true) {
+            if (node != null) {
+                visitor.visit(node.element);
+                // 如果有右子节点，就将右子节点入栈
+                if (node.right != null) stack.push(node.right);
+                node = node.left; // 一路往左走
+            } else {
+                // node为null时，准备访问先前节点的右子节点
+                if (!stack.isEmpty()) {
+                    // 让拿出的节点继续执行 node != null 时的操作
+                    node = stack.pop();
+                } else {
+                    return;
+                }
+            }
+        }
+    }
+
+    //    递归前序遍历
     private void preorderTraversal(BinarySearchTree.Node<E> node, BinarySearchTree.Visitor<E> visitor) {
         if (node == null || visitor == null) return;
 
@@ -60,12 +89,26 @@ public abstract class BinaryTree<E> implements Tree<E>, BinaryTreeInfo {
         preorderTraversal(node.right, visitor);
     }
 
-    // 后序遍历
+    // 非递归后序遍历
     public void postorderTraversal(BinarySearchTree.Visitor<E> visitor) {
-        postorderTraversal(root, visitor);
-        System.out.println();
+        if (null == visitor || root == null) return;
+        Node<E> prev = null;
+        Stack<Node<E>> stack = new LinkedListStack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            Node<E> node = stack.top();
+            if (node.isLeaf() || (prev != null && prev.parent == node)) {
+                Node<E> leaf = stack.pop();
+                visitor.visit(leaf.element);
+                prev = leaf;
+            } else {
+                if (node.right != null) stack.push(node.right);
+                if (node.left != null) stack.push(node.left);
+            }
+        }
     }
 
+    // 递归后序遍历
     private void postorderTraversal(BinarySearchTree.Node<E> node, BinarySearchTree.Visitor<E> visitor) {
         if (node == null) return;
 
@@ -75,12 +118,28 @@ public abstract class BinaryTree<E> implements Tree<E>, BinaryTreeInfo {
         visitor.visit(node.element);
     }
 
-    // 中序遍历
+    // 非递归中序遍历
     public void inorderTraversal(BinarySearchTree.Visitor<E> visitor) {
-        inorderTraversal(root, visitor);
-        System.out.println();
+        if (null == visitor) return;
+        Stack<Node<E>> stack = new LinkedListStack<>();
+        Node<E> node = root;
+        while (true) {
+            if (node != null) {
+                stack.push(node);
+                node = node.left;
+            } else {
+                if (!stack.isEmpty()) {
+                    node = stack.pop();
+                    visitor.visit(node.element);
+                    node = node.right;
+                } else {
+                    return;
+                }
+            }
+        }
     }
 
+    // 递归中序遍历
     private void inorderTraversal(BinarySearchTree.Node<E> node, BinarySearchTree.Visitor<E> visitor) {
         if (node == null) return;
 
@@ -94,7 +153,7 @@ public abstract class BinaryTree<E> implements Tree<E>, BinaryTreeInfo {
     private void traversalCheck(Visitor<E> visitor) {
         if (null == root || null == visitor) {
             System.out.println(
-                    "BinarySearchTree must not be empty, and Visitor must not be null!");
+                    "BinarySearchTree must not be empty and Visitor must not be null!");
         }
     }
 
@@ -109,11 +168,11 @@ public abstract class BinaryTree<E> implements Tree<E>, BinaryTreeInfo {
         if (root == null) return true;
 
         boolean leaf = false;
-        final Queue<Node<E>> queue = new LinkedList<>();
-        queue.offer(root);
+        Queue<Node<E>> queue = new LinkedListQueue<>();
+        queue.enQueue(root);
 
         while (!queue.isEmpty()) {
-            Node<E> node = queue.poll();
+            Node<E> node = queue.deQueue();
 
             if (leaf) { // 要求后面的都是叶子结点
                 if (!node.isLeaf()) return false;
@@ -121,15 +180,15 @@ public abstract class BinaryTree<E> implements Tree<E>, BinaryTreeInfo {
             }
 
             if (node.hasTwoChildren()) {
-                queue.offer(node.left);
-                queue.offer(node.right);
+                queue.enQueue(node.left);
+                queue.enQueue(node.right);
             } else if (node.left == null && node.right != null) {
                 return false;
             } else {
                 // left != null right == null
                 // left == null right == null
                 leaf = true;
-                if (node.left != null) queue.offer(node.left);
+                if (node.left != null) queue.enQueue(node.left);
             }
         }
 
@@ -139,40 +198,36 @@ public abstract class BinaryTree<E> implements Tree<E>, BinaryTreeInfo {
     public void invertBinaryTree() {
         if (root == null) return;
 
-        final Queue<Node<E>> queue = new LinkedList<>();
-        queue.add(root);
+        final Queue<Node<E>> queue = new LinkedListQueue<>();
+        queue.enQueue(root);
         while (!queue.isEmpty()) {
-            final Node<E> node = queue.poll();
+            final Node<E> node = queue.deQueue();
 
             Node<E> temp = node.left;
             node.left = node.right;
             node.right = temp;
 
-            if (node.left != null) queue.offer(node.left);
-            if (node.right != null) queue.offer(node.right);
+            if (node.left != null) queue.enQueue(node.left);
+            if (node.right != null) queue.enQueue(node.right);
         }
     }
 
     public int height() {
         if (root == null) return 0;
 
-        final Queue<Node<E>> queue = new LinkedList<>();
-        queue.offer(root);
+        final Queue<Node<E>> queue = new LinkedListQueue<>();
+        queue.enQueue(root);
         int height = 0;
         int levelSize = 1;
 
         while (!queue.isEmpty()) {
 
-            Node<E> node = queue.poll();
+            Node<E> node = queue.deQueue();
             levelSize--;
 
-            if (node.left != null) {
-                queue.offer(node.left);
-            }
+            if (node.left != null) queue.enQueue(node.left);
 
-            if (node.right != null) {
-                queue.offer(node.right);
-            }
+            if (node.right != null) queue.enQueue(node.right);
 
             if (levelSize == 0) {
                 levelSize = queue.size();
@@ -255,6 +310,10 @@ public abstract class BinaryTree<E> implements Tree<E>, BinaryTreeInfo {
             return null;
         }
 
+        @Override
+        public String toString() {
+            return element + "";
+        }
     }
 
     @Override

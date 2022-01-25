@@ -1,7 +1,7 @@
 package taught_by_mjlmj.stepone.heap;
 
 import taught_by_mjlmj.stepone.interfaces.AbstractHeap;
-import taught_by_mjlmj.stepone.other.printer.BinaryTreeInfo;
+import taught_by_mjlmj.tools.printer.BinaryTreeInfo;
 
 import java.util.Comparator;
 

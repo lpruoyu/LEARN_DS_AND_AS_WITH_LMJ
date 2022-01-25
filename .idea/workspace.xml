@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a5930d70-a54c-4dbe-b9e6-99009fd752f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/LEARN_DS_AND_AS_WITH_LMJ.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LearnDataStructuresWithLMJ.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/HashMapMain$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/HashMapMain$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/HashMapMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/Main$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/Main$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/Main$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/Main$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/Main$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/dynamic_array/ArrayList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/heap/BinaryHeap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/interfaces/AbstractHeap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/interfaces/AbstractList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/interfaces/Deque.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/interfaces/Heap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/interfaces/List.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/interfaces/Map$Visitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/interfaces/Map.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/interfaces/Queue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/interfaces/Set$Visitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/interfaces/Set.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/interfaces/Stack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/interfaces/Tree$Visitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/interfaces/Tree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/interfaces/Trie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/linked_list/CircleLinkedList$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/linked_list/CircleLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/linked_list/CircleLinkedListPlus$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/linked_list/CircleLinkedListPlus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/linked_list/LinkedList$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/linked_list/LinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/linked_list/SingleCircleLinkedList$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/linked_list/SingleCircleLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/linked_list/SingleLinkedList$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/linked_list/SingleLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/map/HashMap$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/map/HashMap$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/map/HashMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/map/HashMap_v0$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/map/HashMap_v0$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/map/HashMap_v0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/map/HashMap_v0_simple$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/map/HashMap_v0_simple$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/map/HashMap_v0_simple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/map/LinkedHashMap$LinkedNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/map/LinkedHashMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/map/TreeMap$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/map/TreeMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/model/Human.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/model/Key.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/model/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/model/SubKey1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/model/SubKey2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/Asserts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/Fibonacci.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/FileInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/Files$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/Files.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/JosephusProblem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/Times$Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/Times.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/printer/BinaryTreeInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/printer/BinaryTrees$PrintStyle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/printer/BinaryTrees.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/printer/InorderPrinter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/printer/LevelOrderPrinter$LevelInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/printer/LevelOrderPrinter$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/printer/LevelOrderPrinter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/printer/Printer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/other/printer/Strings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/queue/DynamicArrayDeque.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/queue/DynamicArrayQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/queue/LinkedListDeque.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/queue/LinkedListQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/queue/PriorityQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/set/HashSet$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/set/HashSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/set/LinkedHashSet$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/set/LinkedHashSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/set/ListSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/set/TreeSet1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/set/TreeSet1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/set/TreeSet2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/set/TreeSet2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/stack/ArrayStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/stack/LinkedListStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/tree/AVLTree$AVLNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/tree/AVLTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/tree/BalancedBinarySearchTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/tree/BinarySearchTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/tree/BinaryTree$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/tree/BinaryTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/tree/RedBlackTree$RBNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/tree/RedBlackTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/trie/TrieMap$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/trie/TrieMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/trie/TrieMap_v0$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/trie/TrieMap_v0$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDataStructuresWithLMJ/taught_by_mjlmj/stepone/trie/TrieMap_v0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HashMapMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/heap/BinaryHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/heap/BinaryHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/map/HashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/map/HashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/map/HashMap_v0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/map/HashMap_v0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/map/HashMap_v0_simple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/map/HashMap_v0_simple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/other/Asserts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/other/FileInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/other/Files.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/other/Times.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/other/printer/BinaryTreeInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/other/printer/BinaryTrees.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/other/printer/InorderPrinter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/other/printer/LevelOrderPrinter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/other/printer/Printer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/other/printer/Strings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/tree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/taught_by_mjlmj/stepone/tree/BinaryTree.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="24Avm06zm0QFS09CfXwcRF51bub" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="taught_by_mjlmj.steptwo.Main" />
+      <module name="LEARN_DS_AND_AS_WITH_LMJ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="taught_by_mjlmj.steptwo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5930d70-a54c-4dbe-b9e6-99009fd752f6" name="Default Changelist" comment="" />
+      <created>1643086361690</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643086361690</updated>
+      <workItem from="1643086363277" duration="72000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

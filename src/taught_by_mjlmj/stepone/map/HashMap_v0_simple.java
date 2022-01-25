@@ -1,12 +1,13 @@
 package taught_by_mjlmj.stepone.map;
 
-import taught_by_mjlmj.stepone.other.printer.BinaryTreeInfo;
-import taught_by_mjlmj.stepone.other.printer.BinaryTrees;
+import taught_by_mjlmj.tools.printer.BinaryTreeInfo;
+import taught_by_mjlmj.tools.printer.BinaryTrees;
+import taught_by_mjlmj.stepone.interfaces.Map;
 
 import java.util.*;
 
 // 支持null作为key
-public class HashMap_v0_simple<K, V> implements taught_by_mjlmj.stepone.interfaces.Map<K, V> {
+public class HashMap_v0_simple<K, V> implements Map<K, V> {
     private static final int DEFAULT_CAPACITY = 1 << 4;
     private int size;
     private Node<K, V>[] table;

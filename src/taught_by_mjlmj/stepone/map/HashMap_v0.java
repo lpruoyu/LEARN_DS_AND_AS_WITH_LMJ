@@ -1,8 +1,8 @@
 package taught_by_mjlmj.stepone.map;
 
 import taught_by_mjlmj.stepone.interfaces.Map;
-import taught_by_mjlmj.stepone.other.printer.BinaryTreeInfo;
-import taught_by_mjlmj.stepone.other.printer.BinaryTrees;
+import taught_by_mjlmj.tools.printer.BinaryTreeInfo;
+import taught_by_mjlmj.tools.printer.BinaryTrees;
 
 import java.util.LinkedList;
 import java.util.Objects;
