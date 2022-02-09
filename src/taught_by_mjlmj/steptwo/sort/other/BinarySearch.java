@@ -1,4 +1,4 @@
-package taught_by_mjlmj.steptwo.help;
+package taught_by_mjlmj.steptwo.sort.other;
 
 public class BinarySearch {
 

@@ -1,6 +1,8 @@
 package taught_by_mjlmj.steptwo.sort;
 
-import taught_by_mjlmj.steptwo.help.Student;
+import taught_by_mjlmj.steptwo.sort.other.CountingSort;
+import taught_by_mjlmj.steptwo.sort.other.RadixSort;
+import taught_by_mjlmj.steptwo.sort.other.Student;
 import taught_by_mjlmj.steptwo.sort.cmp.SelectionSort;
 import taught_by_mjlmj.steptwo.sort.cmp.ShellSort;
 

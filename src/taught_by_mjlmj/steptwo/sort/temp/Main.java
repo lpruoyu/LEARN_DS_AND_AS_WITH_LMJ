@@ -1,9 +1,9 @@
-package taught_by_mjlmj.steptwo;
+package taught_by_mjlmj.steptwo.sort.temp;
 
-import taught_by_mjlmj.steptwo.help.BinarySearch;
-import taught_by_mjlmj.steptwo.help.NBThreadSort;
-import taught_by_mjlmj.steptwo.sort.CountingSort;
-import taught_by_mjlmj.steptwo.sort.RadixSort;
+import taught_by_mjlmj.steptwo.sort.other.BinarySearch;
+import taught_by_mjlmj.steptwo.sort.other.NBThreadSort;
+import taught_by_mjlmj.steptwo.sort.other.CountingSort;
+import taught_by_mjlmj.steptwo.sort.other.RadixSort;
 import taught_by_mjlmj.steptwo.sort.Sort;
 import taught_by_mjlmj.tools.Asserts;
 import taught_by_mjlmj.tools.Integers;
@@ -22,27 +22,31 @@ public class Main {
     public static final Integer[] ORIGINAL_ARRAY = Integers.random(1000, 1, 10000);
 
     public static void main(String[] args) {
-        radixSortTest();
-//        countingSortTest();
-//        sortThreadTest();
-//        searchInsertTest();
-//        binarySearchTest();
-//        sortTest(new BubbleSort<>());
-//        sortTest(new SelectionSort<>());
-//        sortTest(new HeapSort<>());
-//        sortTest(new InsertionSort<>());
-        testSortWithThread(
-//                new BubbleSort<>(),
-//                new SelectionSort<>(),
-//                new InsertionSort<>(),
-//                new HeapSort<>(),
-//                new MergeSort<>(),
-//                new QuickSort<>(),
-//                new ShellSort<>(),
-//                new CountingSort(),
-//                new RadixSort()
-        );
+
     }
+
+//    public static void main(String[] args) {
+//        radixSortTest();
+////        countingSortTest();
+////        sortThreadTest();
+////        searchInsertTest();
+////        binarySearchTest();
+////        sortTest(new BubbleSort<>());
+////        sortTest(new SelectionSort<>());
+////        sortTest(new HeapSort<>());
+////        sortTest(new InsertionSort<>());
+//        testSortWithThread(
+////                new BubbleSort<>(),
+////                new SelectionSort<>(),
+////                new InsertionSort<>(),
+////                new HeapSort<>(),
+////                new MergeSort<>(),
+////                new QuickSort<>(),
+////                new ShellSort<>(),
+////                new CountingSort(),
+////                new RadixSort()
+//        );
+//    }
 
     public static void print(int[] array) {
         for (int i = 0; i < array.length; i++) {

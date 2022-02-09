@@ -1,4 +1,6 @@
-package taught_by_mjlmj.steptwo.sort;
+package taught_by_mjlmj.steptwo.sort.other;
+
+import taught_by_mjlmj.steptwo.sort.Sort;
 
 public class CountingSort extends Sort<Integer> {
     @Override
