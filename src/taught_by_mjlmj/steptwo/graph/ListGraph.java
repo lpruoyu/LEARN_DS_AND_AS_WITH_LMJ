@@ -327,7 +327,8 @@ public class ListGraph<V, E> extends Graph<V, E> {
     // minimum spanning tree
     @Override
     public Set<EdgeInfo<V, E>> mst() {
-        return prim();
+        return kruskal();
+//        return prim();
     }
 
     private Set<EdgeInfo<V, E>> prim() {
@@ -349,6 +350,28 @@ public class ListGraph<V, E> extends Graph<V, E> {
             edgeInfos.add(edge.edgeInfo());
             addedVertex.add(edge.to);
             minHeap.addAll(edge.to.outEdges);
+        }
+        return edgeInfos;
+    }
+
+    private Set<EdgeInfo<V, E>> kruskal() {
+        int verticesSize = vertices.size() - 1; // 终止条件：生成树的边集的数量 == 顶点集的数量 - 1
+        if (-1 == verticesSize) return null; // 0-1 == -1，如果没有顶点的话返回null
+        final Set<EdgeInfo<V, E>> edgeInfos = new HashSet<>(); // 返回给用户的生成树的边的信息
+        // 使用并查集巧妙的判断是否有环
+        final UnionFind<Vertex<V, E>> unionFind = new UnionFind<>();
+        // 初始化并查集（初始化时，每一个顶点都是一个单独的集合）
+        vertices.values().forEach(unionFind::makeSet);
+        // 使用最小堆辅助我们方便快速的找出最小权值的边
+        final MinHeap<Edge<V, E>> minHeap = new MinHeap<>(edges, edgeComparator);
+        while (!minHeap.isEmpty() && edgeInfos.size() < verticesSize) {
+            Edge<V, E> edge = minHeap.remove();
+            // 如果某个边的起点和终点属于同一个集合，那么这条边就不能组成生成树
+            // 因为如果让这条边组成生成树的话，那么这颗生成树就有环了
+            if (unionFind.isSame(edge.from, edge.to)) continue;
+            edgeInfos.add(edge.edgeInfo());
+            // 将这条边的起点和终点这两个顶点所在的集合合并为一个集合
+            unionFind.union(edge.from, edge.to);
         }
         return edgeInfos;
     }
